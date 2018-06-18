@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "How to play";
+}
+
+
+
+    <div class="infolayer">
+        <div class="row">
+            <div class="col s12">
+                <h3  style="font-family: 'Monofett', cursive;">How to play</h3>
+            </div>
+        </div>
+        <div class="row" style="text-align: justify;">
+
+            <div class="col s12">
+                <p >
+                    Quack-a-mole is a modern version of "whack-a mole" where a quantum computer decides whether to show a mole or not.<br /> As a player you are standing in the middle of the field, surrounded by the holes. Keep on looking around to quack as many moles as you can.
+                    <br />
+                </p>
+
+                <p> The game illustrates the two main concepts of quantum mechanics: superposition and entanglement.</p>
+                <h4>Mode 1: superposition only</h4>
+                <p>Originally all the holes are in the superposition of 2 possible states: showing/not showing the mole. When in superposition, the hole is sparkling and looks like this:</p>
+                <div style="text-align:center">
+                    <img class="responsive-img" src="~/Content/images/sparklinghole.png" alt="sparkling hole" />
+                </div>
+
+
+                <p>When the hole comes to your field of view (= when you look at it), the measurement starts. Wait for a bit, that's the moment when the request is sent to IBM Q Experience (<a href="https://quantumexperience.ng.bluemix.net/qx/experience" style="color:black;font-weight:bold">https://quantumexperience.ng.bluemix.net</a>). Keep on looking until the hole stops sparkling after getting the measurement results and possibly shows a mole. <span style="font-weight:bold">Quack it now</span> by clicking on it!</p>
+                <div style="text-align:center">
+                    <img class="responsive-img" src="~/Content/images/showingmole.png" alt="showing a mole" />
+                </div>
+                <p>When the hole is measured once, it won't show a mole again. You will need to set it in superposition by not looking at it (look around or in the sky). That's why you'll need to keep on looking around to get more points!</p>
+                <h4>Mode 2: superposition and entanglement</h4>
+                <p>In this mode two holes can be connected to each other. We use a CNOT-gate to define if the two paired holes show/do not show their moles.</p>
+                <p>The control-hole is set to superposition, and if after the measurement it shows a mole, the paired target-hole also shows a mole.</p>
+                <p>When the holes finish sparkling, two paired holes will have the same color. If the two paired holes do show a mole, you need to quack only one of them to quack both! You'll get 2 points for it.</p>
+                <p> But don't forget that there are still stand-alone holes in this mode, so you'll get only 1 point if you quack a mole from a "superposition only"-hole.</p>
+                <div style="text-align:center">
+                    <img class="responsive-img" src="~/Content/images/ent.png" alt="entanglement" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <h3 class="center" style="font-family: 'Monofett', cursive;">Good luck!</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col l6 s12 center">
+                <a class="waves-effect btn-large" href="@Url.Action("Index","Game")" style="background-color:#F9FFBC; font-family:'IBM Plex Sans', sans-serif;color:#0277bd;font-weight:bold;width:100%">Play mode 1</a>
+            </div>
+            <div class="col l6 s12 center">
+                <a class="waves-effect btn-large" href="@Url.Action("Ent","Game")" style="background-color:#F9FFBC; font-family:'IBM Plex Sans', sans-serif;color:#0277bd;font-weight:bold;width:100%">Play mode 2</a>
+            </div>
+        </div>
+
+    </div>
+

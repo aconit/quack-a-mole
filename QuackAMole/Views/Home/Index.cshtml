@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Welcome!";
+}
+
+    <div class="row" style=" margin:auto; padding:0;position:absolute;  top: 0; right: 0; bottom: 0; left: 0;">
+        <div class="col l4 s12"></div>
+        <div class="col l4 s12 valign-wrapper" style="height:100%;">
+            <div class="overlayer">
+                <div class="row">
+                    <div class="col s12" style="text-align:center">
+                        <img class="responsive-img" src="~/Content/images/logo.png" alt="quack-a-mole" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12" style="text-align: center;">
+                        <a class="waves-effect btn-large" href="@Url.Action("Info")" style="background-color:#F9FFBC; font-family:'IBM Plex Sans', sans-serif;color:#0277bd;font-weight:bold;width:100%">How to play</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12" style="text-align: center;">
+                        <a class="waves-effect btn-large" href="@Url.Action("Index","Game")" style="background-color:#F9FFBC; font-family:'IBM Plex Sans', sans-serif;color:#0277bd;font-weight:bold;width:100%">Play mode 1</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12" style="text-align: center;">
+                        <a class="waves-effect btn-large" href="@Url.Action("Ent","Game")" style="background-color:#F9FFBC; font-family:'IBM Plex Sans', sans-serif;color:#0277bd;font-weight:bold;width:100%">Play mode 2</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col l4 s12"></div>
+    </div>
+   
+
