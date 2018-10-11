@@ -19,7 +19,6 @@ namespace QuackAMole.Controllers
         private string _token = "YOURTOKENHERE";
         private HttpClient _client = new HttpClient();
         private int _shots = 1;
-        private int _seeds = 1;
         private string _deviceRunType = "simulator";
         public string _codeType = "QASM2";
          
@@ -161,9 +160,8 @@ namespace QuackAMole.Controllers
             Result result = new Result();
 
 
-            string url = string.Format("/codes/execute?shots={0}&seed={1}&deviceRunType={2}",
+            string url = string.Format("/codes/execute?shots={0}&deviceRunType={1}",
                     _shots.ToString(),
-                    _seeds.ToString(),
                     _deviceRunType
                     );
 
